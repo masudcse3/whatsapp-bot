@@ -1,0 +1,19 @@
+# @format
+
+version: "3.8"
+services:
+  database:
+    image: mongo:latest
+    container_name: whatsapp-db
+    restart: on-failure
+    ports:
+      - "27017:27017"
+    volumes:
+      - whatsapp_data:/data/db
+    networks:
+      - whatsapp-network
+volumes:
+  whatsapp_data:
+networks:
+  whatsapp-network:
+    driver: bridge

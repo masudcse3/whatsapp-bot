@@ -1,0 +1,43 @@
+/** @format */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* table */
+table {
+  width: 100%; /* Sets the table to take full width of its container */
+  border-collapse: collapse; /* Collapses the border lines between cells */
+  font-family: Arial, sans-serif; /* Sets a clean, readable font */
+  margin-top: 10px;
+}
+h1 {
+  text-align: center;
+  font-size: 22px;
+  border-bottom: 1px solid #ffffff;
+  margin-bottom: 16px;
+}
+h2 {
+  font-size: 20px;
+}
+th,
+td {
+  padding: 8px; /* Adds space inside each table cell */
+  border: 1px solid #ddd; /* Adds a light gray border around each cell */
+  text-align: left; /* Aligns text to the left of each cell */
+}
+
+thead {
+  background-color: #f4f4f4; /* Light gray background for header */
+  font-weight: bold; /* Makes header text bold */
+  color: #000;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Lighter gray for odd rows */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e9e9e9; /* Slightly darker gray for even rows */
+}

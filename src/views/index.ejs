@@ -1,0 +1,47 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <table id="data-list">
+      <thead>
+        <tr>
+          <th>Serial</th>
+          <th>Name</th>
+          <th>Unit/Building Number</th>
+          <th>Project</th>
+          <th>Mobile No</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <%
+        for(let i = 0; i<data.length; i++){ %>
+          <tr>
+          <td> <%= data[i].serial %></td>
+          <td> <%= data[i].name %></td>
+          <td> <%= data[i].unit %></td>
+          <td> <%= data[i].project %></td>
+          <td> <%= data[i].mobile %></td>
+          <td> <a 
+            href="<%= generateMsg(data[i].name, data[i].mobile, data[i].unit, data[i].project) %>" 
+            target="_blank" 
+            id="send"
+            
+            >Send</a></td>
+          
+        </tr>
+        <% }
+        %>
+        
+      </tbody>
+    </table>
+
+  </body>
+</html>
