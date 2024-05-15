@@ -27,7 +27,7 @@ app.get("/health", (req, res) => {
     message: "OK",
   });
 });
-app.get("/", home);
+app.get("/:id", home);
 
 // 404 error handler
 app.use((req, res, next) => {
